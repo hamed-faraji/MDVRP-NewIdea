@@ -24,7 +24,13 @@ public class CrossOver {
 	
 	}
 	public ArrayList<Customers> copyUTmp (ArrayList<Customers> asl, ArrayList<Customers> fake){
-	
+		for (int i = 0; i < asl.size(); i++) {
+
+			fake.add(asl.get(i));
+
+		}
+
+		return fake;
 	}
 	public boolean check (ArrayList<Customers> cus1, ArrayList<Customers> cus2){
 		boolean c = true;
