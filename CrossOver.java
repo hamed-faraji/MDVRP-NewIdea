@@ -27,5 +27,15 @@ public class CrossOver {
 	
 	}
 	public boolean check (ArrayList<Customers> cus1, ArrayList<Customers> cus2){
+		boolean c = true;
+		for (int i = 0; i < cus1.size(); i++) {
+
+			if(!(cus1.get(i).ID == cus2.get(i).ID))
+				c = false;
+
+		}
+
+		return c;
 	
 	}
+}
