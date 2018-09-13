@@ -17,6 +17,16 @@ public class CrossOver {
 
 			while((check(depot1.customers, depot2.customers)))
 				depot2 = combine(chr1.chromosome.get(random), chr2.chromosome.get(random));
+			
+			chr1.chromosome.remove(random);
+			chr2.chromosome.remove(random);
+			chr1.chromosome.add(random, depot1);
+			chr1.chromosome.add(random, depot2);
+
+			chr[0] = chr1;
+			chr[1] = chr2;
+
+		return chr;
 		
 	}
 	public void makeMatrix(ArrayList<Customers> cus1, ArrayList<Customers> cus2){
