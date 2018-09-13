@@ -1,6 +1,7 @@
-
 import java.util.ArrayList;
+
 public class Depot {
+	
 	int x;
     int y;
     int capacity;
