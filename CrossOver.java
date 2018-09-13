@@ -2,6 +2,9 @@ import java.util.ArrayList;
 
 public class CrossOver {
 	
+	ArrayList<ArrayList<Index>> matrix = new ArrayList<ArrayList<Index>>();
+	ArrayList<Customers> uniqueCustomers = new ArrayList<Customers>();
+	
 	public Chromosome[] crossover(Chromosome chr1 ,Chromosome chr2){
 		
 	}
