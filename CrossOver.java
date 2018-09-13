@@ -6,6 +6,17 @@ public class CrossOver {
 	ArrayList<Customers> uniqueCustomers = new ArrayList<Customers>();
 	
 	public Chromosome[] crossover(Chromosome chr1 ,Chromosome chr2){
+		Chromosome[] chr = new Chromosome[2];
+
+		int random = (int) (Math.random() * chr1.chromosome.size());
+
+			makeMatrix(chr1.chromosome.get(random).customers, chr2.chromosome.get(random).customers);
+			Depot depot1 = combine(chr1.chromosome.get(random), chr2.chromosome.get(random));
+
+			Depot depot2 = combine(chr1.chromosome.get(random), chr2.chromosome.get(random));
+
+			while((check(depot1.customers, depot2.customers)))
+				depot2 = combine(chr1.chromosome.get(random), chr2.chromosome.get(random));
 		
 	}
 	public void makeMatrix(ArrayList<Customers> cus1, ArrayList<Customers> cus2){
