@@ -30,6 +30,27 @@ public class CrossOver {
 		
 	}
 	public void makeMatrix(ArrayList<Customers> cus1, ArrayList<Customers> cus2){
+		for (int i = 0; i < cus1.size(); i++) {
+
+			ArrayList<Index> matrixRow = new ArrayList<Index>();
+			uniqueCustomers.add(cus1.get(i));
+
+			if(i == 0){
+				matrixRow.add(new Index(cus1.get(cus1.size() - 1)));
+				matrixRow.add(new Index(cus1.get(1)));
+			}
+
+			else if(i == cus1.size() - 1){
+				matrixRow.add(new Index(cus1.get(cus1.size() - 2)));
+				matrixRow.add(new Index(cus1.get(0)));
+			}
+
+			else {
+				matrixRow.add(new Index(cus1.get(i - 1)));
+				matrixRow.add(new Index(cus1.get(i + 1)));
+			}
+
+			int index = find(cus2, cus1.get(i));
 		
 	}
 	public int find(ArrayList<Customers> cus2, Customers cus){
