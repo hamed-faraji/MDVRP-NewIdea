@@ -89,6 +89,27 @@ public class CrossOver {
 						matrixRow.add(new Index(cus2.get(index - 1)));
 
 				}
+				else{
+
+					if(cus2.get(index - 1).ID == matrixRow.get(0).cus.ID)
+						matrixRow.get(0).plus = true;
+					else if(cus2.get(index - 1).ID == matrixRow.get(1).cus.ID)
+						matrixRow.get(1).plus = true;
+					else
+						matrixRow.add(new Index(cus2.get(index - 1)));
+
+					if(cus2.get(index + 1).ID == matrixRow.get(0).cus.ID)
+						matrixRow.get(0).plus = true;
+					else if(cus2.get(index + 1).ID == matrixRow.get(1).cus.ID)
+						matrixRow.get(1).plus = true;
+					else
+						matrixRow.add(new Index(cus2.get(index + 1)));
+
+				}
+
+			}
+
+			matrix.add(matrixRow);
 		
 	}
 	public int find(ArrayList<Customers> cus2, Customers cus){
