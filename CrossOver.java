@@ -110,6 +110,35 @@ public class CrossOver {
 			}
 
 			matrix.add(matrixRow);
+		}
+
+		for (int i = 0; i < cus2.size(); i++) {
+
+			ArrayList<Index> matrixRow = new ArrayList<Index>();
+
+			if(find(uniqueCustomers, cus2.get(i)) == -1){
+				uniqueCustomers.add(cus2.get(i));
+
+				if(i == 0){
+					matrixRow.add(new Index(cus2.get(cus2.size() - 1)));
+					matrixRow.add(new Index(cus2.get(1)));
+				}
+
+				else if(i == cus2.size() - 1){
+					matrixRow.add(new Index(cus2.get(cus2.size() - 2)));
+					matrixRow.add(new Index(cus2.get(0)));
+				}
+
+				else {
+					matrixRow.add(new Index(cus2.get(i - 1)));
+					matrixRow.add(new Index(cus2.get(i + 1)));
+				}
+
+				matrix.add(matrixRow);
+
+			}
+
+		}
 		
 	}
 	public int find(ArrayList<Customers> cus2, Customers cus){
